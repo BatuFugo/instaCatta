@@ -1,0 +1,188 @@
+/*
+if you wanna change something try with modify the parameters in the :root
+*/
+:root
+{
+    --form: 1;
+    --transition: 0.2;
+    --border-width: 3;
+    --border-radius: 6;
+    --font-size: 0.75;
+    --input-heigth: 1;
+    --input-width: 70;
+    --font-style: "Lucida Console", "Courier New", monospace;
+    --dark-green: rgba( 20, 175, 131, 100);   
+    --error: #e41749;
+    --alert-heigth: 67;
+    --alert-width: 560;
+}
+
+body
+{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    background: rgb(190,237,220);
+    background: linear-gradient(90deg, rgb(141, 211, 186) 0%, rgba(125,247,214,1) 22%, rgba(3,163,169,1) 100%);
+}
+
+form
+{
+    padding: 20px 10px;
+    margin: auto;
+    margin-top: 3rem;
+    background-color: white;
+    border-radius: calc(var(--border-radius) * 2px);
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    grid-gap: .5rem 1rem;
+    width: calc(var(--form) * 25rem);
+    height: fit-content;
+}
+
+.alert
+{
+    min-height: calc(var(--alert-heigth) * 1px);
+    width: calc(var(--alert-width) * 1px);
+    max-width: 90%;
+    border-radius: calc(var(--border-radius) * 2px);
+    padding: 16px 22px 17px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.alert-error 
+{
+    background: var(--error);
+}
+
+.alert-warning {
+    background: var(--warning);
+}
+
+.alert .icon__wrapper 
+{
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.253);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert .icon__wrapper span 
+{
+    font-size: 21px;
+    color: #fff;
+}
+
+.alert p
+{
+    color: #fff;
+    font-family: Verdana;
+    margin-left: 10px;
+}
+
+.alert p a,
+.alert p a:visited,
+.alert p a:active {
+    color: #fff;
+}
+
+.alert .open 
+{
+    margin-left: auto;
+    margin-right: 5px;
+}
+
+.alert .close, .alert .open 
+{
+    color: #fff;
+    transition: transform 0.5s;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.alert .close:hover, .alert .open:hover 
+{
+    transform: scale(1.3);
+}
+
+[type='password']
+{
+    padding: 12px 20px;
+    font-size: calc(var(--font-size) * 1rem);
+    font-family: var(--font-style);
+    border-width: calc(var(--border-width) * 1px);
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: calc(var(--border-radius) * 1px);
+    text-align: center;
+    outline: transparent;
+    width: calc(var(--input-width) * 1%);
+    height: calc(var(--input-heigth) * 1rem);
+    transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+    margin-bottom: 10px;
+}
+
+[type='text']
+{
+    padding: 12px 20px;
+    font-size: calc(var(--font-size) * 1rem);
+    font-family: var(--font-style);
+    border-width: calc(var(--border-width) * 1px);
+    border-style: solid;
+    border-color: var(--accent);
+    border-radius: calc(var(--border-radius) * 1px);
+    text-align: center;
+    outline: transparent;
+    width: calc(var(--input-width) * 1%);
+    height: calc(var(--input-heigth) * 1rem);
+    transition: border-color calc(var(--transition, 0.2) * 1s) ease;
+    margin-bottom: 10px;
+}
+
+button
+{
+    cursor: pointer;
+    font-size: calc(var(--font-size) * 1rem);
+    font-family: var(--font-style);
+    border-radius: calc(var(--border-radius) * 1px);
+    background-color: var(--dark-green);
+    border: none;
+    color: white;
+    margin: auto;
+    margin-top: 0;
+    width: calc(var(--input-width) * 0.95%);
+    height: calc(var(--input-heigth) * 2.75rem);
+}
+
+.title
+{
+    padding-bottom: 10px;
+    margin: auto;
+    color: var(--dark-green);
+    font-size: calc(var(--font-size) * 2rem);
+    font-family: var(--font-style);
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+
+a
+{
+    cursor: pointer;
+    font-size: calc(var(--font-size) * .75rem);
+    font-family: var(--font-style);
+    text-align: center;
+    color: var(--dark-green);
+    border: none;
+    margin-top: 2px;
+    margin-bottom: 0;
+    height: min-content;
+}
+
